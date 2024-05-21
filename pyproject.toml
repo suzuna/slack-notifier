@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "slack_notifier"
+version = "0.0.1"
+authors = [
+    {name = "suzuna"}
+]
+description = "A simple Python package to post to a Slack channel via Slack webhook URL."
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.9"
+dependencies =  [
+    "requests >= 2.25.1",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/suzuna/slack-notifier"
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+    "__pycache__/",
+    ".ipynb_checkpoints/",
+]
